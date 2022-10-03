@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: url("img/homepage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    .nav {
+        padding: 0 1em 0 1em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 77.81px;
+        width: 100%;
+        a {
+            color: white;
+        }
+    }
+}
+
+
+// .welcomeScreen {
+//     height: 100vh;
+//     width: 100%;
+//     background-color: #e29a95;
+//     font-family: Domaine;
+//     color: white;
+//     font-size: 5rem;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     animation: expand 0.8s ease forwards;
+//     position: relative;
+//     transition: all 0.8s ease;
+// }

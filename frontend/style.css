@@ -1,1 +1,25 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("img/homepage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+.container .nav {
+  padding: 0 1em 0 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 77.81px;
+  width: 100%;
+}
+.container .nav a {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
