@@ -14,10 +14,17 @@ rootElement.insertAdjacentHTML("afterend",
 const containerElement = document.querySelector(".container");
 containerElement.insertAdjacentHTML("afterend", `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`);
 
-let splashScreen = document.querySelector('.splashScreen');
+const splashScreen = document.querySelector('.splashScreen');
+const titleText = document.querySelectorAll('.titleText h1, .titleText p');
+
 window.addEventListener('DOMContentLoaded', () => {
     setTimeout(()=> {
-        splashScreen.style.top = '-99vh'
+        splashScreen.style.top = '-100vh'
+        containerElement.classList.add("pinkBorder");
+        for(let i = 0; i < titleText.length; i += 1)
+        {
+            titleText[i].classList.add("fade-in");
+        }
     }, 1600)
 });
 

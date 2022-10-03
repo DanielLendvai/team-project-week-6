@@ -4,12 +4,32 @@
 }
 @font-face {
     font-family: Domaine;
-    src: url(fonts/DomaineNarrow.otf);
-  }
+    src: url(fonts/DomaineNarrow.woff2);
+}
 @font-face {
     font-family: Domaine-bold;
     src: url(fonts/DomaineDisplayBold.ttf);
 }
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+        transform: translateY(10%);
+	}
+	100% {
+		opacity: 1;
+        transform: translateY(0%);
+	}
+}
+
 .splashScreen {
     position: fixed;
     z-index: 1;
@@ -26,19 +46,28 @@
     p {
         font-size: 8vw;
         font-family: Domaine-bold;
+        letter-spacing: -1px;
     }
 }
-
+.pinkBorder {
+    outline: 5px solid #e29a95;
+    outline-offset: -5px;
+}
 .container {
     height: 100vh;
     width: 100%;
-    font-family: Domaine;
     background-image: url("img/homepage.jpg");
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: 100% 60%;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
 
     .titleText {
         display: flex;
@@ -46,19 +75,26 @@
         align-items: center;
         color: white;
         width: 100%;
-        height: 10vh;
+        height: auto;
         flex-direction: column;
-        justify-content: space-evenly;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
         h1 {
-            font-size: 7vw;
+            font-size: 7.1875rem;
+            letter-spacing: -1px;
             font-weight: 400;
-            line-height: 1em;
-            padding-bottom: 1em;
-            letter-spacing: 5px;
+            font-family: Domaine;
+            
         }
-        p { 
-            line-height: 1em;
-            font-size: 2vw;
+        p {
+            font-size: 1.5rem;
+            letter-spacing: 0.00938rem;
+            font-weight: 400;
+            font-family: Domaine;
+            margin-top: 2rem;
         }
     }
     .nav {
@@ -68,12 +104,12 @@
         justify-content: space-between;
         height: 77.81px;
         width: 100%;
+        position: fixed;
         a {
             color: white;
         }
     }
 }
-
 
 // .welcomeScreen {
 //     height: 100vh;
