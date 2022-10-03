@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: Domaine;
+  src: url(fonts/DomaineNarrow.otf);
+}
+@font-face {
+  font-family: Domaine-bold;
+  src: url(fonts/DomaineDisplayBold.ttf);
+}
 .splashScreen {
   position: fixed;
   z-index: 1;
@@ -12,11 +20,20 @@
   height: 100vh;
   background-color: #e29a95;
   transition: 1s;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.splashScreen p {
+  font-size: 8vw;
+  font-family: Domaine-bold;
 }
 
 .container {
   height: 100vh;
   width: 100%;
+  font-family: Domaine;
   background-image: url("img/homepage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,10 +54,13 @@
 .container .titleText h1 {
   font-size: 7vw;
   font-weight: 400;
+  line-height: 1em;
+  padding-bottom: 1em;
+  letter-spacing: 5px;
 }
 .container .titleText p {
+  line-height: 1em;
   font-size: 2vw;
-  font-weight: 400;
 }
 .container .nav {
   padding: 0 1em 0 1em;

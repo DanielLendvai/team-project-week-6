@@ -12,13 +12,12 @@ rootElement.insertAdjacentHTML("afterend",
 </div>`);
 
 const containerElement = document.querySelector(".container");
-containerElement.insertAdjacentHTML("afterend", `<div class="splashScreen"></div>`);
+containerElement.insertAdjacentHTML("afterend", `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`);
 
 let splashScreen = document.querySelector('.splashScreen');
-
 window.addEventListener('DOMContentLoaded', () => {
-
     setTimeout(()=> {
-        splashScreen.style.top = '-98vh'
+        splashScreen.style.top = '-99vh'
     }, 1600)
-})
+});
+
