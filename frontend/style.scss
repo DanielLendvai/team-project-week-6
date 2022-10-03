@@ -73,6 +73,111 @@
         }
     }
 }
+    
+.containerSecond {
+    height: 110vh;
+    width: 100%;
+    font-family: Domaine-bold;
+    background-color: white;
+    display: flex;
+    position: relative;
+
+
+    .imageSecond {
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: 2rem;
+        bottom: 7rem;
+        box-shadow: -20px 20px #e29a95;
+        
+
+    }
+    .headerSecond {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        right: 0rem;
+        top: 6rem;
+        font-size: 5vw;
+        font-weight: 50;
+        line-height: 1.2;
+        font-family: Domaine;
+        color: #53575c;
+        letter-spacing: 0;
+
+    }
+
+    .paragraphSecond {
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        bottom: 16rem;
+        right: 7rem;
+        font-size: 1.56vw;
+        font-family: Domaine;
+        color: #53575c;
+    }
+
+    .details {
+        display: flex;
+        width: 40%;
+        height: 30vh;
+        position: absolute;
+        bottom: 1rem;
+        right: 7rem;
+        font-size: 1.56vw;
+        font-family: Domaine;
+        color: #53575c;
+        justify-content: space-between;
+        flex-flow: column;
+        text-align: center;
+        
+
+        .discription {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: column;
+            align-items: center;
+            font-family: Domaine;
+            color: #53575c;
+            width: 100%;
+            height: 10vh;
+
+            .paragraphThird {
+                display: flex;
+                justify-content: flex-start;
+                position: absolute;
+                flex-flow: column;
+                text-align: center;
+                right: 30vw;
+
+            }
+
+            .paragraphFourth {
+                display: flex;
+                justify-content: flex-end;
+                position: absolute;
+                flex-flow: column;
+                text-align: center;
+                right: 10vw;
+
+            }
+            
+        }
+    }
+
+}
+
+
+
+
 
 
 // .welcomeScreen {

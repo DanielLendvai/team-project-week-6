@@ -1,7 +1,8 @@
 const rootElement = document.querySelector("#root");
 
-rootElement.insertAdjacentHTML("afterend", 
-`<div class="container">
+rootElement.insertAdjacentHTML(
+  "afterend",
+  `<div class="container">
 <div class="nav">
 <a href="">Hamburger</a><a href="">apartments</a><a href="">why griffith wood</a><a href="">living here</a><a href="">LOGO</a><a href="">find us</a><a href="">enquire now</a>
 </div>
@@ -9,15 +10,52 @@ rootElement.insertAdjacentHTML("afterend",
 <h1>A new way of city living</h1>
 <p>A different avenue of renting</p>
 </div>
-</div>`);
+</div>`
+);
 
 const containerElement = document.querySelector(".container");
-containerElement.insertAdjacentHTML("afterend", `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`);
+containerElement.insertAdjacentHTML(
+  "afterend",
+  `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`
+);
 
-let splashScreen = document.querySelector('.splashScreen');
-window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(()=> {
-        splashScreen.style.top = '-99vh'
-    }, 1600)
+let splashScreen = document.querySelector(".splashScreen");
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    splashScreen.style.top = "-99vh";
+  }, 1600);
 });
 
+containerElement.insertAdjacentHTML(
+  "afterend",
+  `<div class="containerSecond">
+  <img class="imageSecond" src="https://www.griffith-wood.com/wp-content/uploads/2021/09/20210825_GREYSTAR_GRIFFITHWOOD_0122_GRD_WEB-560x728.jpg" alt="">
+  
+  <div class="headerSecond"><h2>The avenue to better living</h2></div>
+  
+  <div class="paragraphSecond"><p>One, two and three-bedroom apartments to rent, within a parkland setting on Dublin’s prestigious Griffith Avenue. Each designed to the highest specification and furnished to suit your needs, with access to a dedicated concierge service, bespoke gym, residents’ lounge and co-working space. And the best places to play, work and learn close to home.<p></div>
+
+<div class="details">
+
+<div class="discription">
+<a href="">
+<p class="paragraphThird">One Bed</p>
+<p class="paragraphFourth">From €2,140 p/m</p>
+</a>
+</div>
+<div class="discription">
+<a href="">
+<p class="paragraphThird">Two Bed</p>
+<p class="paragraphFourth">From €2,445 p/m</p>
+</a>
+</div>
+<div class="discription">
+<a href="">
+<p class="paragraphThird">Three Bed</p>
+<p class="paragraphFourth">From €3,600 p/m</p>
+</a>
+</div>
+</div>
+
+  </div>`
+);
