@@ -5,9 +5,9 @@ rootElement.insertAdjacentHTML("afterend",
 <div class="nav">
 <a href="">Hamburger</a><a href="">apartments</a><a href="">why griffith wood</a><a href="">living here</a><a href="">LOGO</a><a href="">find us</a><a href="">enquire now</a>
 </div>
-<div class="H1">
+<div class="titleText">
 <h1>A new way of city living</h1>
-<h2>A different avenue of renting</h2>
+<p>A different avenue of renting</p>
 </div>
 </div>`);
 
