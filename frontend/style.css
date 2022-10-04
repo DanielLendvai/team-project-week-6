@@ -277,6 +277,7 @@
   position: absolute;
   top: 2rem;
   bottom: 7rem;
+  left: 3rem;
   box-shadow: -20px 20px #e29a95;
 }
 .containerSecond .headerSecond {
@@ -285,9 +286,9 @@
   justify-content: flex-end;
   align-items: center;
   position: absolute;
-  right: 0rem;
-  top: 6rem;
-  font-size: 5vw;
+  right: 1rem;
+  top: 3rem;
+  font-size: 4vw;
   font-weight: 50;
   line-height: 1.2;
   font-family: Domaine;
@@ -300,8 +301,8 @@
   justify-content: flex-end;
   align-items: center;
   position: absolute;
-  bottom: 16rem;
-  right: 7rem;
+  bottom: 18rem;
+  right: 9rem;
   font-size: 1.56vw;
   font-family: Domaine;
   color: #53575c;
@@ -309,14 +310,14 @@
 .containerSecond .details {
   display: flex;
   width: 40%;
-  height: 30vh;
+  height: 20vh;
   position: absolute;
-  bottom: 1rem;
-  right: 7rem;
+  bottom: 7rem;
+  right: 9rem;
   font-size: 1.56vw;
   font-family: Domaine;
   color: #53575c;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-flow: column;
   text-align: center;
 }
@@ -326,9 +327,13 @@
   flex-flow: column;
   align-items: center;
   font-family: Domaine;
+  font-size: 20px;
   color: #53575c;
   width: 100%;
-  height: 10vh;
+  height: 8vh;
+  border-top: #53575c solid 1px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 .containerSecond .details .discription .paragraphThird {
   display: flex;
@@ -336,7 +341,7 @@
   position: absolute;
   flex-flow: column;
   text-align: center;
-  right: 30vw;
+  left: 0vw;
 }
 .containerSecond .details .discription .paragraphFourth {
   display: flex;
@@ -344,5 +349,18 @@
   position: absolute;
   flex-flow: column;
   text-align: center;
-  right: 10vw;
+  right: 2vw;
+}
+.containerSecond .btn1 {
+  padding: 10px 50px;
+  border: solid 1px #e29a95;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 2rem;
+  left: 39rem;
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */
