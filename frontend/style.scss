@@ -112,7 +112,7 @@
         margin: 6px 0 0 0;
     }
 
-    .navLeft {
+    .navLeft,  .navRight {
         display: flex;
         align-items: center;
         transition: .4s;
@@ -136,20 +136,29 @@
         color: pink!important;
     }
 
-    // .hide:hover ::after {
-    //     content: "";
-    //     position: absolute;
-    //     top: 10vw;
-    //     left: 0;
-    //     height: 20vw;
-    //     width: 100%;
-    //     background-color: white;
-    // }
-
+    .hidden {
+        display: none;
+        position: absolute;
+        background-color: white;
+        top: 10vw;
+        left: 0;
+        height: 20vw;
+        width: 100%;
+    } 
+    .hide:hover .hidden {
+        transition: .7s;
+        display: block;
+    }
+    .navRight{ 
+        margin-right: 5vw;
+    }
     .navCenter {
         display: flex;
         align-items: center;
-        // padding-left: 10vw;
+        justify-content: center;
+        flex: 1;
+        padding-right: 5vw;
+        line-height: 1.7vw;
         a {
             color: #e29a95;
             text-decoration: none;
@@ -158,18 +167,7 @@
         }
     }
 }
-.hidden {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: 10vw;
-    left: 0;
-    height: 20vw;
-    width: 100%;
-} 
-.hide:hover .hidden {
-    display: block!important;
-}
+
 
 // ------------------NIKI--------------------
 .page1 {

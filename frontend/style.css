@@ -126,12 +126,12 @@
   background-color: rgba(255, 255, 255, 0.841);
   margin: 6px 0 0 0;
 }
-.navContainer .navLeft {
+.navContainer .navLeft, .navContainer .navRight {
   display: flex;
   align-items: center;
   transition: 0.4s;
 }
-.navContainer .navLeft a {
+.navContainer .navLeft a, .navContainer .navRight a {
   font-size: 0.7rem;
   color: #fff;
   text-decoration: none;
@@ -149,18 +149,7 @@
 .navContainer .navLeft:hover > a {
   color: pink !important;
 }
-.navContainer .navCenter {
-  display: flex;
-  align-items: center;
-}
-.navContainer .navCenter a {
-  color: #e29a95;
-  text-decoration: none;
-  font-size: 2vw;
-  font-family: Domaine-bold;
-}
-
-.hidden {
+.navContainer .hidden {
   display: none;
   position: absolute;
   background-color: white;
@@ -169,9 +158,26 @@
   height: 20vw;
   width: 100%;
 }
-
-.hide:hover .hidden {
-  display: block !important;
+.navContainer .hide:hover .hidden {
+  transition: 0.7s;
+  display: block;
+}
+.navContainer .navRight {
+  margin-right: 5vw;
+}
+.navContainer .navCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding-right: 5vw;
+  line-height: 1.7vw;
+}
+.navContainer .navCenter a {
+  color: #e29a95;
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: Domaine-bold;
 }
 
 .page1 {

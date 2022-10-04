@@ -32,7 +32,19 @@ rootElement.insertAdjacentHTML(
                 Griffith<br>Wood
             </a>
         </div>
+        <div class="navRight">
+            <a href="">
+                Find us
+            </a>
+        </div>
+        <div class="navRight">
+            <a href="">
+                enquire now
+            </a>
+        </div>
     </div>
+
+
     <div class="titleText">
         <h1>A new way of city living</h1>
         <p>A different avenue of renting</p>
