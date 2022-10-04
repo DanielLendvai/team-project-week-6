@@ -3,7 +3,7 @@ const rootElement = document.querySelector("#root");
 rootElement.insertAdjacentHTML(
     "afterend",
     `<div class="container">
-    <div class="navContainer">
+    <div class="navContainer nav-fixed">
         <div class="hamburger">
             <a href="">
                 <div class="hamburger-icon"></div>
@@ -130,3 +130,12 @@ containerElement.insertAdjacentHTML(
 
   </div>`
 );
+//navbar 
+const navbar = document.querySelector('.nav-fixed');
+window.onscroll = () => {
+    if (window.scrollY > 200) {
+        navbar.classList.add('nav-scrolled');
+    } else {
+        navbar.classList.remove('nav-scrolled');
+    }
+};

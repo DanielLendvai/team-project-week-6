@@ -93,13 +93,23 @@
         }
     }
 }
+.nav-fixed { 
+    position: fixed;
+    transition: .4s;
+}
+.nav-scrolled {
+    background-color: #fff;
+    height: 5vw!important;
+    a {
+        color: #292929;
+    }
+}
 .navContainer {
     padding: 0 1em 0 0.5em;
     display: flex;
     flex-direction: row;
     height: 10vw;
     width: 100%;
-    position: fixed;
     .hamburger {
         padding-top: 5vw;
         margin-left: 3.5vw;
