@@ -1,7 +1,8 @@
 const rootElement = document.querySelector("#root");
 
-rootElement.insertAdjacentHTML("afterend", 
-`<div class="container">
+rootElement.insertAdjacentHTML(
+    "afterend",
+    `<div class="container">
     <div class="navContainer">
         <div class="hamburger">
             <a href="">
@@ -10,7 +11,8 @@ rootElement.insertAdjacentHTML("afterend",
                 <div class="hamburger-icon"></div>
             </a>
         </div> 
-        <div class="navLeft">
+        <div class="navLeft hide">
+        <div class="hidden"></div>
             <a href="">
                 APARTMENTS
             </a>
@@ -31,7 +33,6 @@ rootElement.insertAdjacentHTML("afterend",
             </a>
         </div>
     </div>
-
     <div class="titleText">
         <h1>A new way of city living</h1>
         <p>A different avenue of renting</p>
@@ -62,31 +63,31 @@ rootElement.insertAdjacentHTML("afterend",
         </div>
     </div>
 </div>
-`);
+`
+);
 
 const containerElement = document.querySelector(".container");
 containerElement.insertAdjacentHTML(
-  "afterend",
-  `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`
+    "afterend",
+    `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`
 );
 
-const splashScreen = document.querySelector('.splashScreen');
-const titleText = document.querySelectorAll('.titleText h1, .titleText p');
+const splashScreen = document.querySelector(".splashScreen");
+const titleText = document.querySelectorAll(".titleText h1, .titleText p");
 
-window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(()=> {
-        splashScreen.style.top = '-100vh'
+window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        splashScreen.style.top = "-100vh";
         containerElement.classList.add("pinkBorder");
-        for(let i = 0; i < titleText.length; i += 1)
-        {
+        for (let i = 0; i < titleText.length; i += 1) {
             titleText[i].classList.add("fade-in");
         }
-    }, 1600)
+    }, 1600);
 });
 
 containerElement.insertAdjacentHTML(
-  "afterend",
-  `<div class="containerSecond">
+    "afterend",
+    `<div class="containerSecond">
   <img class="imageSecond" src="https://www.griffith-wood.com/wp-content/uploads/2021/09/20210825_GREYSTAR_GRIFFITHWOOD_0122_GRD_WEB-560x728.jpg" alt="">
   
   <div class="headerSecond"><h2>The avenue to better living</h2></div>

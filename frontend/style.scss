@@ -136,6 +136,16 @@
         color: pink!important;
     }
 
+    // .hide:hover ::after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 10vw;
+    //     left: 0;
+    //     height: 20vw;
+    //     width: 100%;
+    //     background-color: white;
+    // }
+
     .navCenter {
         display: flex;
         align-items: center;
@@ -147,6 +157,18 @@
             font-family: Domaine-bold;
         }
     }
+}
+.hidden {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 10vw;
+    left: 0;
+    height: 20vw;
+    width: 100%;
+} 
+.hide:hover .hidden {
+    display: block!important;
 }
 
 // ------------------NIKI--------------------

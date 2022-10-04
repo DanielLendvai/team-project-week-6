@@ -160,6 +160,20 @@
   font-family: Domaine-bold;
 }
 
+.hidden {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 10vw;
+  left: 0;
+  height: 20vw;
+  width: 100%;
+}
+
+.hide:hover .hidden {
+  display: block !important;
+}
+
 .page1 {
   display: flex;
   justify-content: center;
