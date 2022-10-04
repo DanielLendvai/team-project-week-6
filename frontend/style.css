@@ -39,6 +39,12 @@
   height: 77.81px;
   width: 100%;
 }
+.container .nav .hamburger-icon {
+  width: 35px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.841);
+  margin: 6px 0;
+}
 .container .nav a {
   color: white;
 }/*# sourceMappingURL=style.css.map */
