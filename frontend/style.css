@@ -47,7 +47,6 @@
 }
 .splashScreen {
   position: fixed;
-  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
@@ -109,7 +108,7 @@
 }
 
 .navContainer {
-  padding: 0em 1em 0 0.5em;
+  padding: 0 1em 0 0.5em;
   display: flex;
   flex-direction: row;
   height: 10vw;
@@ -117,35 +116,48 @@
   position: fixed;
 }
 .navContainer .hamburger {
-  margin-left: 3rem;
-  height: 77.81px;
+  padding-top: 5vw;
+  margin-left: 3.5vw;
+  margin-right: 3vw;
 }
 .navContainer .hamburger-icon {
   width: 35px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.841);
-  margin: 6px 0;
+  margin: 6px 0 0 0;
 }
-.navContainer a {
-  color: white;
-}
-.navContainer div {
-  height: 77.81px;
+.navContainer .navLeft {
   display: flex;
   align-items: center;
-  margin: 0 1em 0 1em;
+  transition: 0.4s;
 }
-.navContainer div p {
-  font-size: 0.625rem;
+.navContainer .navLeft a {
+  font-size: 0.7rem;
+  color: #fff;
+  text-decoration: none;
   line-height: 1.2;
   padding: 75px 16px 44px 23px;
   display: block;
   letter-spacing: 0.07rem;
   text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
   font-weight: 500;
   font-family: termina, sans-serif;
+}
+.navContainer .navLeft:hover {
+  background-color: white;
+}
+.navContainer .navLeft:hover > a {
+  color: pink !important;
+}
+.navContainer .navCenter {
+  display: flex;
+  align-items: center;
+}
+.navContainer .navCenter a {
+  color: #e29a95;
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: Domaine-bold;
 }
 
 .page1 {

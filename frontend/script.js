@@ -10,25 +10,24 @@ rootElement.insertAdjacentHTML("afterend",
                 <div class="hamburger-icon"></div>
             </a>
         </div> 
-        <div>
+        <div class="navLeft">
             <a href="">
-                <div>
-                    <p>APARTMENTS</p>
-                </div>
+                APARTMENTS
             </a>
         </div>
-        <div>
-            <a href="">
-                <div>
-                    <p>WHY GRIFFITH WOOD?</p>
-                </div>
+        <div class="navLeft">
+            <a href="">               
+                WHY GRIFFITH WOOD            
             </a>
         </div>
-        <div>
+        <div class="navLeft">
             <a href="">
-                <div>
-                    <p>LIVING HERE</p>
-                </div>
+                LIVING HERE
+            </a>
+        </div>
+        <div class="navCenter">
+            <a href="">
+                Griffith<br>Wood
             </a>
         </div>
     </div>
