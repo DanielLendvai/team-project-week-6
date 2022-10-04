@@ -3,15 +3,82 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: Domaine;
+  src: url(fonts/DomaineNarrow.woff2);
+}
+@font-face {
+  font-family: Domaine-bold;
+  src: url(fonts/DomaineDisplayBold.ttf);
+}
+.fade-in {
+  opacity: 1;
+  -webkit-animation-name: fadeInOpacity;
+          animation-name: fadeInOpacity;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.splashScreen {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #e29a95;
+  transition: 1s;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.splashScreen p {
+  font-size: 8vw;
+  font-family: Domaine-bold;
+  letter-spacing: -1px;
+}
+
+.pinkBorder {
+  outline: 5px solid #e29a95;
+  outline-offset: -5px;
+}
+
 .container {
   height: 100vh;
   width: 100%;
   background-image: url("img/homepage.jpg");
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 100% 60%;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
 }
 .container .titleText {
   display: flex;
@@ -19,17 +86,25 @@
   align-items: center;
   color: white;
   width: 100%;
-  height: 10vh;
+  height: auto;
   flex-direction: column;
-  justify-content: space-evenly;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .container .titleText h1 {
-  font-size: 7vw;
+  font-size: 7.1875rem;
+  letter-spacing: -1px;
   font-weight: 400;
+  font-family: Domaine;
 }
 .container .titleText p {
-  font-size: 2vw;
+  font-size: 1.5rem;
+  letter-spacing: 0.00938rem;
   font-weight: 400;
+  font-family: Domaine;
+  margin-top: 2rem;
 }
 .container .nav {
   padding: 0 1em 0 1em;
@@ -38,6 +113,7 @@
   justify-content: space-between;
   height: 77.81px;
   width: 100%;
+  position: fixed;
 }
 .container .nav .hamburger-icon {
   width: 35px;
@@ -47,4 +123,90 @@
 }
 .container .nav a {
   color: white;
+}
+
+.containerSecond {
+  height: 110vh;
+  width: 100%;
+  font-family: Domaine-bold;
+  background-color: white;
+  display: flex;
+  position: relative;
+}
+.containerSecond .imageSecond {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 2rem;
+  bottom: 7rem;
+  box-shadow: -20px 20px #e29a95;
+}
+.containerSecond .headerSecond {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: 0rem;
+  top: 6rem;
+  font-size: 5vw;
+  font-weight: 50;
+  line-height: 1.2;
+  font-family: Domaine;
+  color: #53575c;
+  letter-spacing: 0;
+}
+.containerSecond .paragraphSecond {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  bottom: 16rem;
+  right: 7rem;
+  font-size: 1.56vw;
+  font-family: Domaine;
+  color: #53575c;
+}
+.containerSecond .details {
+  display: flex;
+  width: 40%;
+  height: 30vh;
+  position: absolute;
+  bottom: 1rem;
+  right: 7rem;
+  font-size: 1.56vw;
+  font-family: Domaine;
+  color: #53575c;
+  justify-content: space-between;
+  flex-flow: column;
+  text-align: center;
+}
+.containerSecond .details .discription {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  align-items: center;
+  font-family: Domaine;
+  color: #53575c;
+  width: 100%;
+  height: 10vh;
+}
+.containerSecond .details .discription .paragraphThird {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  flex-flow: column;
+  text-align: center;
+  right: 30vw;
+}
+.containerSecond .details .discription .paragraphFourth {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  flex-flow: column;
+  text-align: center;
+  right: 10vw;
 }/*# sourceMappingURL=style.css.map */
