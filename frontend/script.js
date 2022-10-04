@@ -43,12 +43,55 @@ rootElement.insertAdjacentHTML("afterend",
 `);
 
 const containerElement = document.querySelector(".container");
-containerElement.insertAdjacentHTML("afterend", `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`);
+containerElement.insertAdjacentHTML(
+  "afterend",
+  `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`
+);
 
-let splashScreen = document.querySelector('.splashScreen');
+const splashScreen = document.querySelector('.splashScreen');
+const titleText = document.querySelectorAll('.titleText h1, .titleText p');
+
 window.addEventListener('DOMContentLoaded', () => {
     setTimeout(()=> {
-        splashScreen.style.top = '-99vh'
+        splashScreen.style.top = '-100vh'
+        containerElement.classList.add("pinkBorder");
+        for(let i = 0; i < titleText.length; i += 1)
+        {
+            titleText[i].classList.add("fade-in");
+        }
     }, 1600)
 });
 
+containerElement.insertAdjacentHTML(
+  "afterend",
+  `<div class="containerSecond">
+  <img class="imageSecond" src="https://www.griffith-wood.com/wp-content/uploads/2021/09/20210825_GREYSTAR_GRIFFITHWOOD_0122_GRD_WEB-560x728.jpg" alt="">
+  
+  <div class="headerSecond"><h2>The avenue to better living</h2></div>
+  
+  <div class="paragraphSecond"><p>One, two and three-bedroom apartments to rent, within a parkland setting on Dublin’s prestigious Griffith Avenue. Each designed to the highest specification and furnished to suit your needs, with access to a dedicated concierge service, bespoke gym, residents’ lounge and co-working space. And the best places to play, work and learn close to home.<p></div>
+
+<div class="details">
+
+<div class="discription">
+<a href="">
+<p class="paragraphThird">One Bed</p>
+<p class="paragraphFourth">From €2,140 p/m</p>
+</a>
+</div>
+<div class="discription">
+<a href="">
+<p class="paragraphThird">Two Bed</p>
+<p class="paragraphFourth">From €2,445 p/m</p>
+</a>
+</div>
+<div class="discription">
+<a href="">
+<p class="paragraphThird">Three Bed</p>
+<p class="paragraphFourth">From €3,600 p/m</p>
+</a>
+</div>
+</div>
+
+  </div>`
+);
