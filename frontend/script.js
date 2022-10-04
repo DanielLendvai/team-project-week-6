@@ -2,18 +2,43 @@ const rootElement = document.querySelector("#root");
 
 rootElement.insertAdjacentHTML("afterend", 
 `<div class="container">
-    <div class="nav">
-    <a href="">
-    <div class="hamburger-icon"></div>
-    <div class="hamburger-icon"></div>
-    <div class="hamburger-icon"></div></a>
-    <a href="">apartments</a><a href="">why griffith wood</a><a href="">living here</a><a href="">LOGO</a><a href="">find us</a><a href="">enquire now</a>
+    <div class="navContainer">
+        <div class="hamburger">
+            <a href="">
+                <div class="hamburger-icon"></div>
+                <div class="hamburger-icon"></div>
+                <div class="hamburger-icon"></div>
+            </a>
+        </div> 
+        <div>
+            <a href="">
+                <div>
+                    <p>APARTMENTS</p>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <div>
+                    <p>WHY GRIFFITH WOOD?</p>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <div>
+                    <p>LIVING HERE</p>
+                </div>
+            </a>
+        </div>
     </div>
+
     <div class="titleText">
         <h1>A new way of city living</h1>
         <p>A different avenue of renting</p>
     </div>
 </div>
+
 <div class="page1">
     <div class="textwrap">
         <h1>WELCOME</h1>

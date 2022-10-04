@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 @font-face {
     font-family: Domaine;
@@ -12,22 +13,22 @@
 }
 
 .fade-in {
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 1s;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
 }
 
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
+    0% {
+        opacity: 0;
         transform: translateY(10%);
-	}
-	100% {
-		opacity: 1;
+    }
+    100% {
+        opacity: 1;
         transform: translateY(0%);
-	}
+    }
 }
 
 .splashScreen {
@@ -54,7 +55,7 @@
     outline-offset: -5px;
 }
 .container {
-    height: 100vh;
+    height: 102vh;
     width: 100%;
     background-image: url("img/homepage.jpg");
     overflow: hidden;
@@ -82,7 +83,6 @@
             letter-spacing: -1px;
             font-weight: 400;
             font-family: Domaine;
-            
         }
         p {
             font-size: 1.5rem;
@@ -92,25 +92,46 @@
             margin-top: 2rem;
         }
     }
-    .nav {
-        padding: 0 1em 0 1em;
+}
+.navContainer {
+    padding: 0em 1em 0 0.5em;
+    display: flex;
+    flex-direction: row;
+    height: 10vw;
+    width: 100%;
+    position: fixed;
+    .hamburger {
+        margin-left: 3rem;
+        height: 77.81px;
+    }
+    .hamburger-icon {
+        width: 35px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.841);
+        margin: 6px 0;
+    }
+    a {
+        color: white;
+    }
+    div {
+        height: 77.81px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        height: 77.81px;
-        width: 100%;
-        position: fixed;
-        .hamburger-icon{
-            width: 35px;
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.841);
-            margin: 6px 0;
-          }
-        a {
-            color: white;
+        margin: 0 1em 0 1em;
+        p {
+            font-size: 0.625rem;
+            line-height: 1.2;
+            padding: 75px 16px 44px 23px;
+            display: block;
+            letter-spacing: 0.07rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-family: termina, sans-serif;
         }
     }
-} // container
+}
 
 // ------------------NIKI--------------------
 .page1 {
@@ -127,7 +148,7 @@
 
         h1 {
             font-size: 16px;
-            font-family: 'termina',sans-serif;
+            font-family: "termina", sans-serif;
             font-size: 12px;
             color: #c1c2c4;
         }
@@ -135,7 +156,7 @@
         .text {
             display: flex;
             align-items: center;
-            font-family: 'Domaine';
+            font-family: "Domaine";
             color: #53575c;
             font-size: 3.25rem;
             line-height: 1.1481481481481481em;
@@ -143,7 +164,7 @@
             width: 480px;
             letter-spacing: 0;
         }
-        
+
         a {
             text-decoration: none;
             margin-top: 20px;
@@ -152,13 +173,13 @@
                 font-size: 10px;
                 padding: 15px 25px;
                 border: 1px solid #e29b95;
-                font-family: 'termina', sans-serif;
+                font-family: "termina", sans-serif;
                 color: #414141;
             }
 
             span:hover {
                 background-color: #e29b95;
-                color: #FFFFFF;
+                color: #ffffff;
                 transition-duration: 500ms;
             }
         }
@@ -173,23 +194,23 @@
             justify-content: center;
             align-items: center;
         }
-    
+
         .right {
             display: flex;
             flex-direction: column;
             row-gap: 50px;
-    
+
             .righttop {
                 display: flex;
             }
-        
+
             .rightbottom {
                 display: flex;
             }
         }
     }
 }
-    
+
 .containerSecond {
     height: 110vh;
     width: 100%;
@@ -197,7 +218,6 @@
     background-color: white;
     display: flex;
     position: relative;
-
 
     .imageSecond {
         height: 100vh;
@@ -223,7 +243,6 @@
         font-family: Domaine;
         color: #53575c;
         letter-spacing: 0;
-
     }
 
     .paragraphSecond {
@@ -252,7 +271,6 @@
         justify-content: space-between;
         flex-flow: column;
         text-align: center;
-        
 
         .discription {
             display: flex;
@@ -271,7 +289,6 @@
                 flex-flow: column;
                 text-align: center;
                 right: 30vw;
-
             }
 
             .paragraphFourth {
@@ -281,16 +298,10 @@
                 flex-flow: column;
                 text-align: center;
                 right: 10vw;
-
             }
-            
         }
     }
-
 }
-
-
-
 
 // ------------------NIKI--------------------
 

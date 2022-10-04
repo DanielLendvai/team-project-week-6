@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -70,7 +71,7 @@
 }
 
 .container {
-  height: 100vh;
+  height: 102vh;
   width: 100%;
   background-image: url("img/homepage.jpg");
   overflow: hidden;
@@ -106,23 +107,45 @@
   font-family: Domaine;
   margin-top: 2rem;
 }
-.container .nav {
-  padding: 0 1em 0 1em;
+
+.navContainer {
+  padding: 0em 1em 0 0.5em;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 77.81px;
+  flex-direction: row;
+  height: 10vw;
   width: 100%;
   position: fixed;
 }
-.container .nav .hamburger-icon {
+.navContainer .hamburger {
+  margin-left: 3rem;
+  height: 77.81px;
+}
+.navContainer .hamburger-icon {
   width: 35px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.841);
   margin: 6px 0;
 }
-.container .nav a {
+.navContainer a {
   color: white;
+}
+.navContainer div {
+  height: 77.81px;
+  display: flex;
+  align-items: center;
+  margin: 0 1em 0 1em;
+}
+.navContainer div p {
+  font-size: 0.625rem;
+  line-height: 1.2;
+  padding: 75px 16px 44px 23px;
+  display: block;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-family: termina, sans-serif;
 }
 
 .page1 {
@@ -168,7 +191,7 @@
 }
 .page1 .textwrap a span:hover {
   background-color: #e29b95;
-  color: #FFFFFF;
+  color: #ffffff;
   transition-duration: 500ms;
 }
 .page1 .images {
