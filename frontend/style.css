@@ -125,7 +125,6 @@
   color: white;
 }
 
-<<<<<<< HEAD
 .page1 {
   display: flex;
   justify-content: center;
@@ -150,7 +149,9 @@
   align-items: center;
   font-family: "Domaine";
   color: #53575c;
-  font-size: 52px;
+  font-size: 3.25rem;
+  line-height: 1.1481481481em;
+  font-weight: 400;
   width: 480px;
   letter-spacing: 0;
 }
@@ -190,7 +191,8 @@
 }
 .page1 .images .right .rightbottom {
   display: flex;
-=======
+}
+
 .containerSecond {
   height: 110vh;
   width: 100%;
@@ -275,5 +277,4 @@
   flex-flow: column;
   text-align: center;
   right: 10vw;
->>>>>>> 7965a7c0fdce0fd36174525b3b7494be991e170a
 }/*# sourceMappingURL=style.css.map */
