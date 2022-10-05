@@ -286,7 +286,7 @@
   justify-content: flex-end;
   align-items: center;
   position: absolute;
-  right: 1rem;
+  left: 50%;
   top: 3rem;
   font-size: 4vw;
   font-weight: 50;
@@ -302,7 +302,7 @@
   align-items: center;
   position: absolute;
   bottom: 18rem;
-  right: 9rem;
+  left: 50%;
   font-size: 1.56vw;
   font-family: Domaine;
   color: #53575c;
@@ -313,7 +313,7 @@
   height: 20vh;
   position: absolute;
   bottom: 7rem;
-  right: 9rem;
+  left: 50%;
   font-size: 1.56vw;
   font-family: Domaine;
   color: #53575c;
@@ -361,6 +361,11 @@
   align-items: center;
   position: absolute;
   bottom: 2rem;
-  left: 39rem;
+  left: 50%;
   background-color: white;
+}
+.containerSecond .btn1:hover {
+  background-color: #e29b95;
+  color: #ffffff;
+  transition-duration: 500ms;
 }/*# sourceMappingURL=style.css.map */

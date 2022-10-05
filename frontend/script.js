@@ -126,7 +126,11 @@ containerElement.insertAdjacentHTML(
 </div>
 </div>
 
-<div><button class="btn1">OUR APARTMENTS</button></div>
+<div>
+<a href="">
+<button class="btn1">OUR APARTMENTS</button>
+</a>
+</div>
 
   </div>`
 );
