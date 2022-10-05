@@ -173,10 +173,10 @@
         display: inline;
         position: relative;
 
-        svg {
+        a {
             position: absolute;
-            top: 2vh;
-            left: 2vw;
+            color: white;
+            
         }
     }
     .navCenter {
@@ -275,123 +275,155 @@
 }
 
 .containerSecond {
-    height: 110vh;
+    height: 100vh;
     width: 100%;
     font-family: Domaine-bold;
     background-color: white;
     display: flex;
-    position: relative;
+    justify-content: center;
 
-    .imageSecond {
-        height: 100vh;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        position: absolute;
-        top: 2rem;
-        bottom: 7rem;
-        left: 3rem;
-        box-shadow: -20px 20px #e29a95;
-    }
-    .headerSecond {
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        position: absolute;
-        left: 50%;
-        top: 3rem;
-        font-size: 4vw;
-        font-weight: 50;
-        line-height: 1.2;
-        font-family: Domaine;
-        color: #53575c;
-        letter-spacing: 0;
-    }
-
-    .paragraphSecond {
-        width: 40%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        position: absolute;
-        bottom: 30rem;
-        left: 50%;
-        font-size: 1.56vw;
-        font-family: Domaine;
-        color: #53575c;
-    }
-
-    .details {
-        display: flex;
-        width: 40%;
-        height: 20vh;
-        position: absolute;
-        bottom: 13rem;
-        left: 50%;
-        font-size: 1.56vw;
-        font-family: Domaine;
-        color: #53575c;
-        justify-content: flex-end;
-        flex-flow: column;
-        text-align: center;
-
-        .discription {
-            display: flex;
-            justify-content: space-between;
-            flex-flow: column;
-            align-items: center;
-            font-family: Domaine;
-            font-size: 20px;
-            color: #53575c;
-            width: 100%;
-            height: 8vh;
-            border-top: #53575c solid 1px;
-            padding-top: 10px;
-            padding-bottom: 20px;
-
-
-
-            .paragraphThird {
-                display: flex;
-                justify-content: flex-start;
-                position: absolute;
-                flex-flow: column;
-                text-align: center;
-                left: 0vw;
-            }
-
-            .paragraphFourth {
-                display: flex;
-                justify-content: flex-end;
-                position: absolute;
-                flex-flow: column;
-                text-align: center;
-                right: 2vw;
-            }
-        }
-    }
-
-    .btn1 {
-        padding: 10px 50px;
-        border: solid 1px #e29a95;
-        width: 250px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        bottom: 8rem;
-        left: 50%;
-        background-color: white;
-    }
-
-    .btn1:hover {
-        background-color: #e29b95;
-        color: #ffffff;
-        transition-duration: 500ms;
-    }
+.containerSecondLeft {
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: -20px 20px #e29a95;
 }
+.containerSecondRight {
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+}
+    // position: relative;
+
+    // .imageSecond {
+    //     height: 80vh;
+    //     display: flex;
+    //     justify-content: flex-start;
+    //     align-items: center;
+    //     position: absolute;
+    //     top: 2rem;
+    //     bottom: 7rem;
+    //     left: 10rem;
+    //     box-shadow: -20px 20px #e29a95;
+    // }
+
+    // .containerSecondRight {
+
+    //     width: 50%;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     position: relative;
+    //     right: 0;
+
+        
+    //     .headerSecond {
+    //         width: 80%;
+    //         display: flex;
+    //         justify-content: flex-end;
+    //         align-items: center;
+    //         position: absolute;
+    //         right: 10%;
+    //         top: 3rem;
+    //         font-size: 3vw;
+    //         font-weight: 100;
+    //         line-height: 1.2;
+    //         font-family: Domaine;
+    //         color: #53575c;
+    //         letter-spacing: 0;
+            
+    //     }
+    
+    //     .paragraphSecond {
+    //         width: 80%;
+    //         display: flex;
+    //         justify-content: flex-end;
+    //         align-items: center;
+    //         position: absolute;
+    //         bottom: 5rem;
+    //         left: 50%;
+    //         font-size: 1.56vw;
+    //         font-family: Domaine;
+    //         color: #53575c;
+            
+    //     }
+    
+    //     .details {
+    //         display: flex;
+    //         width: 80%;
+    //         height: 20vh;
+    //         position: absolute;
+    //         bottom: 2rem;
+    //         left: 50%;
+    //         font-size: 1.56vw;
+    //         font-family: Domaine;
+    //         color: #53575c;
+    //         justify-content: flex-end;
+    //         flex-flow: column;
+    //         text-align: center;
+    
+    //         .discription {
+    //             display: flex;
+    //             justify-content: space-between;
+    //             flex-flow: column;
+    //             align-items: center;
+    //             font-family: Domaine;
+    //             font-size: 20px;
+    //             color: #53575c;
+    //             width: 100%;
+    //             height: 8vh;
+    //             border-top: #53575c solid 1px;
+    //             padding-top: 10px;
+    //             padding-bottom: 20px;
+    
+    
+    
+    //             .paragraphThird {
+    //                 display: flex;
+    //                 justify-content: flex-start;
+    //                 position: absolute;
+    //                 flex-flow: column;
+    //                 text-align: center;
+    //                 left: 0vw;
+    //             }
+    
+    //             .paragraphFourth {
+    //                 display: flex;
+    //                 justify-content: flex-end;
+    //                 position: absolute;
+    //                 flex-flow: column;
+    //                 text-align: center;
+    //                 right: 2vw;
+    //             }
+    //         }
+    //     }
+    
+    //     .btn1 {
+    //         padding: 10px 50px;
+    //         border: solid 1px #e29a95;
+    //         width: 250px;
+    //         height: 50px;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         position: absolute;
+    //         bottom: 1rem;
+    //         left: 50%;
+    //         background-color: white;
+    //     }
+    
+    //     .btn1:hover {
+    //         background-color: #e29b95;
+    //         color: #ffffff;
+    //         transition-duration: 500ms;
+    //     }
+    // }
+
+    // }
+    
 
 // ------------------NIKI--------------------
-

@@ -188,10 +188,9 @@
   display: inline;
   position: relative;
 }
-.navContainer .navRight svg {
+.navContainer .navRight a {
   position: absolute;
-  top: 2vh;
-  left: 2vw;
+  color: white;
 }
 .navContainer .navCenter {
   display: flex;
@@ -277,110 +276,23 @@
 }
 
 .containerSecond {
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   font-family: Domaine-bold;
   background-color: white;
   display: flex;
-  position: relative;
+  justify-content: center;
 }
-.containerSecond .imageSecond {
-  height: 100vh;
+.containerSecond .containerSecondLeft {
+  width: 50%;
+  height: 80vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  position: absolute;
-  top: 2rem;
-  bottom: 7rem;
-  left: 3rem;
   box-shadow: -20px 20px #e29a95;
 }
-.containerSecond .headerSecond {
+.containerSecond .containerSecondRight {
   width: 50%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: absolute;
-  left: 50%;
-  top: 3rem;
-  font-size: 4vw;
-  font-weight: 50;
-  line-height: 1.2;
-  font-family: Domaine;
-  color: #53575c;
-  letter-spacing: 0;
-}
-.containerSecond .paragraphSecond {
-  width: 40%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: absolute;
-  bottom: 30rem;
-  left: 50%;
-  font-size: 1.56vw;
-  font-family: Domaine;
-  color: #53575c;
-}
-.containerSecond .details {
-  display: flex;
-  width: 40%;
-  height: 20vh;
-  position: absolute;
-  bottom: 13rem;
-  left: 50%;
-  font-size: 1.56vw;
-  font-family: Domaine;
-  color: #53575c;
-  justify-content: flex-end;
-  flex-flow: column;
-  text-align: center;
-}
-.containerSecond .details .discription {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: column;
-  align-items: center;
-  font-family: Domaine;
-  font-size: 20px;
-  color: #53575c;
-  width: 100%;
-  height: 8vh;
-  border-top: #53575c solid 1px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-.containerSecond .details .discription .paragraphThird {
-  display: flex;
-  justify-content: flex-start;
-  position: absolute;
-  flex-flow: column;
-  text-align: center;
-  left: 0vw;
-}
-.containerSecond .details .discription .paragraphFourth {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  flex-flow: column;
-  text-align: center;
-  right: 2vw;
-}
-.containerSecond .btn1 {
-  padding: 10px 50px;
-  border: solid 1px #e29a95;
-  width: 250px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 8rem;
-  left: 50%;
-  background-color: white;
-}
-.containerSecond .btn1:hover {
-  background-color: #e29b95;
-  color: #ffffff;
-  transition-duration: 500ms;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

@@ -31,13 +31,7 @@ rootElement.insertAdjacentHTML(
             </a>
         </div>
         <div class="navRight">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-geo-alt" viewBox="0 0 16 16">
-            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-            </svg>
-            <a href="">
-                Find us
-            </a>
+            <a href="" target="_blank"><img src="img/map-icon.png" alt="">enquire now</a>
         </div>
         <div class="navRight">
             <a href="">
@@ -98,8 +92,13 @@ containerElement.insertAdjacentHTML(
   </div>
 </div>
   <div class="containerSecond">
+  <div class="containerSecondLeft">
   <img class="imageSecond" src="https://www.griffith-wood.com/wp-content/uploads/2021/09/20210825_GREYSTAR_GRIFFITHWOOD_0122_GRD_WEB-560x728.jpg" alt="">
+
+  </div>
   
+<div class="containerSecondRight">
+
   <div class="headerSecond"><h2>The avenue to better living</h2></div>
   
   <div class="paragraphSecond"><p>One, two and three-bedroom apartments to rent, within a parkland setting on Dublin’s prestigious Griffith Avenue. Each designed to the highest specification and furnished to suit your needs, with access to a dedicated concierge service, bespoke gym, residents’ lounge and co-working space. And the best places to play, work and learn close to home.<p></div>
@@ -131,9 +130,14 @@ containerElement.insertAdjacentHTML(
 <button class="btn1">OUR APARTMENTS</button>
 </a>
 </div>
+</div>
 
   </div>`
 );
+const pageOne = document.querySelector('.page1');
+pageOne.insertAdjacentHTML("afterend", ``);
+
+
 //navbar
 const navbar = document.querySelector(".nav-fixed");
 const hamburgerIcon = document.querySelector("#hamburger");
