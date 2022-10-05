@@ -79,17 +79,17 @@
         transform: translate(-50%, -50%);
 
         h1 {
-            font-size: 7.1875rem;
+            font-size: 5vw;
             letter-spacing: -1px;
             font-weight: 400;
             font-family: Domaine;
         }
         p {
-            font-size: 1.5rem;
+            font-size: 1.5vw;
             letter-spacing: 0.00938rem;
             font-weight: 400;
             font-family: Domaine;
-            margin-top: 2rem;
+            margin-top: 2vw;
         }
     }
 }
@@ -99,11 +99,15 @@
 }
 .nav-scrolled {
     background-color: #fff;
-    height: 5vw!important;
+    height: 4.5vw!important;
     z-index: 99;
-    a {
-        color: #292929;
+    .navLeft a, .navRight a {
+        color: #292929!important;
     }
+
+}
+.filter {
+    filter: none!important;
 }
 .navContainer {
     padding: 0 1em 0 0.5em;
@@ -112,15 +116,19 @@
     height: 10vw;
     width: 100%;
     .hamburger {
-        padding-top: 5vw;
-        margin-left: 3.5vw;
-        margin-right: 3vw;
+        display: flex;
+        align-items: center;
+        margin: 1.5vw 2vw 0 2vw;
     }
-    .hamburger-icon {
-        width: 35px;
-        height: 1px;
-        background-color: rgba(255, 255, 255, 0.841);
-        margin: 6px 0 0 0;
+    img {
+        max-height: 1.6vw;
+        max-width: 2vw;
+        font-weight: 100;
+        filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
+    }
+    #hamburger {
+        height: 1.6vw;
+        width: 2vw;
     }
 
     .navLeft,  .navRight {
@@ -128,11 +136,11 @@
         align-items: center;
         transition: .4s;
         a {
-            font-size: 0.7rem;
+            font-size: 0.5vw;
             color: #fff;
             text-decoration: none;
             line-height: 1.2;
-            padding: 75px 16px 44px 23px;
+            padding: 2vw 1vw 1vw 1vw;
             display: block;
             letter-spacing: 0.07rem;
             text-transform: uppercase;
@@ -352,18 +360,3 @@
 
 // ------------------NIKI--------------------
 
-// .welcomeScreen {
-//     height: 100vh;
-//     width: 100%;
-//     background-color: #e29a95;
-//     font-family: Domaine;
-//     color: white;
-//     font-size: 5rem;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     text-align: center;
-//     animation: expand 0.8s ease forwards;
-//     position: relative;
-//     transition: all 0.8s ease;
-// }

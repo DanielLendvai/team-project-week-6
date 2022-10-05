@@ -5,12 +5,10 @@ rootElement.insertAdjacentHTML(
     `<div class="container">
     <div class="navContainer nav-fixed">
         <div class="hamburger">
-            <a href="">
-                <div class="hamburger-icon"></div>
-                <div class="hamburger-icon"></div>
-                <div class="hamburger-icon"></div>
-            </a>
-        </div> 
+        <a href="">
+            <img src="img/hamburger.png" id="hamburger" />
+        </a>
+        </div>
         <div class="navLeft hide">
         <div class="hidden"></div>
             <a href="">
@@ -43,8 +41,6 @@ rootElement.insertAdjacentHTML(
             </a>
         </div>
     </div>
-
-
     <div class="titleText">
         <h1>A new way of city living</h1>
         <p>A different avenue of renting</p>
@@ -132,10 +128,13 @@ containerElement.insertAdjacentHTML(
 );
 //navbar 
 const navbar = document.querySelector('.nav-fixed');
+const hamburgerIcon = document.querySelector('#hamburger');
 window.onscroll = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 150) {
         navbar.classList.add('nav-scrolled');
+        hamburgerIcon.classList.add('filter');
     } else {
         navbar.classList.remove('nav-scrolled');
+        hamburgerIcon.classList.remove('filter');
     }
 };
