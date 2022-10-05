@@ -426,24 +426,29 @@ html {
 
         .apartmentsButton a {
             text-decoration: none;
-            .btn1 {
-             padding: 10px 50px;
-             border: solid 1px #e29a95;
-             width: 250px;
-             height: 50px;
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             background-color: white;
-             
+            
             }
+
+        .btn1 {
+            padding: 10px 50px;
+            border: solid 1px #e29a95;
+            width: 250px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            margin-top: 20px;
+        }
+   
+        .btn1:hover {
+            background-color: #e29b95;
+            color: #ffffff;
+            transition-duration: 500ms;
         }
 
-         .btn1:hover {
-             background-color: #e29b95;
-             color: #ffffff;
-             transition-duration: 500ms;
-         }
+         
+         
     }
 }
 
