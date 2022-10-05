@@ -181,7 +181,7 @@ html {
 .navContainer .navLeft:hover > a {
   color: pink !important;
 }
-.navContainer .hidden {
+.navContainer .hiddenSection {
   display: none;
   position: absolute;
   background-color: white;
@@ -190,7 +190,7 @@ html {
   height: 20vw;
   width: 100%;
 }
-.navContainer .hide:hover .hidden {
+.navContainer .hide:hover .hiddenSection {
   transition: 0.7s;
   display: block;
 }

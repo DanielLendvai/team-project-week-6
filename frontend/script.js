@@ -10,7 +10,7 @@ rootElement.insertAdjacentHTML(
         </a>
         </div>
         <div class="navLeft hide">
-        <div class="hidden"></div>
+        <div class="hiddenSection"></div>
             <a href="">
                 APARTMENTS
             </a>

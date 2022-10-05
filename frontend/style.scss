@@ -164,7 +164,7 @@ html {
     .navLeft:hover > a {
         color: pink !important;
     }
-    .hidden {
+    .hiddenSection {
         display: none;
         position: absolute;
         background-color: white;
@@ -173,7 +173,7 @@ html {
         height: 20vw;
         width: 100%;
     }
-    .hide:hover .hidden {
+    .hide:hover .hiddenSection {
         transition: 0.7s;
         display: block;
     }
