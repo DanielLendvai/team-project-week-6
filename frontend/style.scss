@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    overflow-x: hidden;
+}
 @font-face {
     font-family: Domaine;
     src: url(fonts/DomaineNarrow.woff2);
@@ -30,9 +33,7 @@
         transform: translateY(0%);
     }
 }
-.visible {
-    display: block;
-}
+
 .splashScreen {
     position: fixed;
     // z-index: 1;
@@ -101,7 +102,7 @@
 }
 .nav-scrolled {
     background-color: #fff;
-    height: 4.5vw !important;
+    height: 3.7vw !important;
     z-index: 99;
     .navLeft a,
     .navRight a {
@@ -121,24 +122,24 @@
     .hamburger {
         display: flex;
         align-items: center;
-        margin: 1.5vw 2vw 0 2vw;
+        margin: 1vw 2vw 0 2vw;
     }
     img {
         max-height: 1.6vw;
         max-width: 2vw;
         font-weight: 100;
-        filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg)
-            brightness(119%) contrast(115%);
+        
     }
     #hamburger {
         z-index: 99;
         cursor: pointer;
+        filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg)
+            brightness(119%) contrast(115%);
         img {
             height: 1.6vw;
             width: 2vw;
         }
     }
-
     .navLeft,
     .navRight {
         display: flex;
@@ -149,7 +150,7 @@
             color: #fff;
             text-decoration: none;
             line-height: 1.2;
-            padding: 2vw 1vw 1vw 1vw;
+            padding: 1.6vw 1vw 1vw 1vw;
             display: block;
             letter-spacing: 0.07rem;
             text-transform: uppercase;
@@ -178,11 +179,10 @@
     }
     .navRight {
         margin-right: 5vw;
-
         a {
             position: absolute;
             color: white;
-            display: flex;
+
             justify-content: center;
             align-items: center;
             
@@ -210,21 +210,31 @@
         a {
             color: #e29a95;
             text-decoration: none;
-            font-size: 2vw;
+            font-size: 1.1vw;
             font-family: Domaine-bold;
         }
     }
 }
+.menuOpen {
+    overflow: hidden;
+}
+.hidden {
+    visibility: hidden!important;
+    opacity: 0!important;
+    transform: translateY(-1rem);
+}
 .hiddenMenu {
-    transition: .4s;
-    display: none;
     position: absolute;
+    transition: .4s;
+    transition-timing-function: ease-in;
     top: 0;
     right: 0;
     background-color: #4b4f54;
     height: 100vh;
     width: 40%;
-    z-index: 99;
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
     .hiddenContainer {
         height: 100%;
         width: 100%;

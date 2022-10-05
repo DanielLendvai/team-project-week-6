@@ -42,7 +42,7 @@ rootElement.insertAdjacentHTML(
             </a>
         </div>
     </div>
-    <div class="hiddenMenu">
+    <div class="hiddenMenu hidden">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X Close</a>
     <div class="hiddenContainer">
         <h1>Apartments</h1>
@@ -153,9 +153,10 @@ pageOne.insertAdjacentHTML(
 
 //navbar
 const navbar = document.querySelector(".nav-fixed");
+const hamburgerIcon = document.querySelector("#hamburger");
 
 window.onscroll = () => {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 100) {
         navbar.classList.add("nav-scrolled");
         hamburgerIcon.classList.add("filter");
     } else {
@@ -163,23 +164,14 @@ window.onscroll = () => {
         hamburgerIcon.classList.remove("filter");
     }
 };
-pageOne.onscroll = () => { 
-    if(pageOne.scrollY > 100) {
-        pageOne.classList.add("fade-in");
-    }
-
-}
 
 //hamburger menu
-// const hamburgerIcon = document.querySelector("#hamburger");
-const hiddenMenu = document.querySelector(".hiddenMenu");
 const bodyElement = document.querySelector("body");
+const hiddenMenu = document.querySelector(".hiddenMenu");
 
 function openNav() {
-    hiddenMenu.style.display = "block";
-    bodyElement.style.overflowY = "hidden";
+    hiddenMenu.classList.toggle("hidden");
 }
 function closeNav() {
-    hiddenMenu.style.display = "none";
-    bodyElement.style.overflowY = "scroll";
+    hiddenMenu.classList.toggle("hidden");
 }
