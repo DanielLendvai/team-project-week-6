@@ -45,6 +45,10 @@
     transform: translateY(0%);
   }
 }
+.visible {
+  display: block;
+}
+
 .splashScreen {
   position: fixed;
   left: 0;
@@ -117,7 +121,8 @@
   height: 4.5vw !important;
   z-index: 99;
 }
-.nav-scrolled .navLeft a, .nav-scrolled .navRight a {
+.nav-scrolled .navLeft a,
+.nav-scrolled .navRight a {
   color: #292929 !important;
 }
 
@@ -144,15 +149,21 @@
   filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
 }
 .navContainer #hamburger {
+  z-index: 99;
+  cursor: pointer;
+}
+.navContainer #hamburger img {
   height: 1.6vw;
   width: 2vw;
 }
-.navContainer .navLeft, .navContainer .navRight {
+.navContainer .navLeft,
+.navContainer .navRight {
   display: flex;
   align-items: center;
   transition: 0.4s;
 }
-.navContainer .navLeft a, .navContainer .navRight a {
+.navContainer .navLeft a,
+.navContainer .navRight a {
   font-size: 0.5vw;
   color: #fff;
   text-decoration: none;
@@ -185,11 +196,21 @@
 }
 .navContainer .navRight {
   margin-right: 5vw;
-  display: inline;
-  position: relative;
 }
 .navContainer .navRight a {
   position: absolute;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navContainer .navRight a p {
+  display: inline;
+}
+.navContainer .navRight a img {
+  display: inline;
+  height: 28px;
+  width: 28px;
   color: white;
 }
 .navContainer .navCenter {
@@ -205,6 +226,54 @@
   text-decoration: none;
   font-size: 2vw;
   font-family: Domaine-bold;
+}
+
+.hiddenMenu {
+  transition: 0.4s;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #4b4f54;
+  height: 100vh;
+  width: 40%;
+  z-index: 99;
+}
+.hiddenMenu .hiddenContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 8vw;
+  color: white;
+}
+.hiddenMenu .hiddenContainer span {
+  display: flex;
+  flex-direction: row;
+  color: #9f9f9f;
+}
+.hiddenMenu .hiddenContainer span p {
+  margin-top: 0.5vw;
+  font-size: 1.25rem;
+}
+.hiddenMenu .hiddenContainer h1 {
+  font-size: 3.25rem;
+  padding-top: 1vw;
+}
+.hiddenMenu .hiddenContainer h4 {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  margin-top: 0.5vw;
+}
+.hiddenMenu .closebtn {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  text-decoration: none;
+  color: white;
+  font-size: 1vw;
+  font-family: Domaine;
 }
 
 .page1 {
@@ -284,15 +353,83 @@
   justify-content: center;
 }
 .containerSecond .containerSecondLeft {
+  height: 100%;
   width: 50%;
-  height: 80vh;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
+  margin-right: 10vw;
+}
+.containerSecond .containerSecondLeft img {
   box-shadow: -20px 20px #e29a95;
+  height: 80vh;
 }
 .containerSecond .containerSecondRight {
+  height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.containerSecond .containerSecondRight .paragraphSecond p {
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: Domaine;
+  line-height: 1.9375rem;
+  color: #53575c;
+  letter-spacing: -0.00625rem;
+  width: 40%;
+  margin: 1.5vh 0 1.5vh 0;
+}
+.containerSecond .containerSecondRight .headerSecond {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.containerSecond .containerSecondRight .headerSecond h2 {
+  font-size: 3.25rem;
+  font-weight: 400;
+  font-family: Domaine;
+  line-height: 1.2;
+  color: #53575c;
+  letter-spacing: 0;
+}
+.containerSecond .containerSecondRight .details {
+  width: 66%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-flow: column;
+}
+.containerSecond .containerSecondRight .details .discription a {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  font-family: termina, sans-serif;
+  color: #53575c;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 10px 0 20px;
+  border-top: 1px solid #c1c2c4;
+}
+.containerSecond .containerSecondRight .apartmentsButton a {
+  text-decoration: none;
+}
+.containerSecond .containerSecondRight .apartmentsButton a .btn1 {
+  padding: 10px 50px;
+  border: solid 1px #e29a95;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.containerSecond .containerSecondRight .btn1:hover {
+  background-color: #e29b95;
+  color: #ffffff;
+  transition-duration: 500ms;
 }/*# sourceMappingURL=style.css.map */

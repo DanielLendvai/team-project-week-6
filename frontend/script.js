@@ -1,12 +1,12 @@
 const rootElement = document.querySelector("#root");
 
 rootElement.insertAdjacentHTML(
-  "afterend",
-  `<div class="container">
+    "afterend",
+    `<div class="container">
     <div class="navContainer nav-fixed">
-        <div class="hamburger">
-        <a href="">
-            <img src="img/hamburger.png" id="hamburger" />
+        <div class="hamburger hideMenu">
+        <a id="hamburger" class="openbtn" onclick="openNav()">
+            <img src="img/hamburger.png" />
         </a>
         </div>
         <div class="navLeft hide">
@@ -31,13 +31,30 @@ rootElement.insertAdjacentHTML(
             </a>
         </div>
         <div class="navRight">
-            <a href="" target="_blank"><img src="img/map-icon.png" alt="">enquire now</a>
+            <a href="">
+                <img src="img/map-icon.png" alt="">
+                <p>find us</p>
+            </a>
         </div>
         <div class="navRight">
             <a href="">
                 enquire now
             </a>
         </div>
+    </div>
+    <div class="hiddenMenu">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X Close</a>
+    <div class="hiddenContainer">
+        <h1>Apartments</h1>
+        <span><p>One Bed,</p><p>Two Bed,</p><p>Three Bed</p></span>
+        <h1>Why Griffith Wood</h1>
+        <h1>Living here</h1>
+        <h4>Our location</h4>
+        <h4>FAQ</h4>
+        <h4>enquire now</h4>
+        <h4>apply now</h4>
+        <h4>resident portal</h4>
+    </div>
     </div>
     <div class="titleText">
         <h1>A new way of city living</h1>
@@ -48,26 +65,26 @@ rootElement.insertAdjacentHTML(
 
 const containerElement = document.querySelector(".container");
 containerElement.insertAdjacentHTML(
-  "afterend",
-  `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`
+    "afterend",
+    `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`
 );
 
 const splashScreen = document.querySelector(".splashScreen");
 const titleText = document.querySelectorAll(".titleText h1, .titleText p");
 
 window.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    splashScreen.style.top = "-100vh";
-    containerElement.classList.add("pinkBorder");
-    for (let i = 0; i < titleText.length; i += 1) {
-      titleText[i].classList.add("fade-in");
-    }
-  }, 1600);
+    setTimeout(() => {
+        splashScreen.style.top = "-100vh";
+        containerElement.classList.add("pinkBorder");
+        for (let i = 0; i < titleText.length; i += 1) {
+            titleText[i].classList.add("fade-in");
+        }
+    }, 1600);
 });
 
 containerElement.insertAdjacentHTML(
-  "afterend",
-  `<div class="page1">
+    "afterend",
+    `<div class="page1">
   <div class="textwrap">
       <h1>WELCOME</h1>
       <div class="text">
@@ -90,21 +107,21 @@ containerElement.insertAdjacentHTML(
           </div>
       </div>
   </div>
+</div>`
+);
+
+const pageOne = document.querySelector(".page1");
+pageOne.insertAdjacentHTML(
+    "afterend",
+    `<div class="containerSecond">
+<div class="containerSecondLeft">
+<img class="imageSecond" src="https://www.griffith-wood.com/wp-content/uploads/2021/09/20210825_GREYSTAR_GRIFFITHWOOD_0122_GRD_WEB-560x728.jpg" alt="">
 </div>
-  <div class="containerSecond">
-  <div class="containerSecondLeft">
-  <img class="imageSecond" src="https://www.griffith-wood.com/wp-content/uploads/2021/09/20210825_GREYSTAR_GRIFFITHWOOD_0122_GRD_WEB-560x728.jpg" alt="">
 
-  </div>
-  
 <div class="containerSecondRight">
-
-  <div class="headerSecond"><h2>The avenue to better living</h2></div>
-  
-  <div class="paragraphSecond"><p>One, two and three-bedroom apartments to rent, within a parkland setting on Dublin’s prestigious Griffith Avenue. Each designed to the highest specification and furnished to suit your needs, with access to a dedicated concierge service, bespoke gym, residents’ lounge and co-working space. And the best places to play, work and learn close to home.<p></div>
-
+<div class="headerSecond"><h2>The avenue to <br>better living</h2></div>
+<div class="paragraphSecond"><p>One, two and three-bedroom apartments to rent, within a parkland setting on Dublin’s prestigious Griffith Avenue. Each designed to the highest specification and furnished to suit your needs, with access to a dedicated concierge service, bespoke gym, residents’ lounge and co-working space. And the best places to play, work and learn close to home.</p></div>
 <div class="details">
-
 <div class="discription">
 <a href="">
 <p class="paragraphThird">One Bed</p>
@@ -125,28 +142,44 @@ containerElement.insertAdjacentHTML(
 </div>
 </div>
 
-<div>
+<div class="apartmentsButton">
 <a href="">
 <button class="btn1">OUR APARTMENTS</button>
 </a>
 </div>
 </div>
-
-  </div>`
+</div>`
 );
-const pageOne = document.querySelector('.page1');
-pageOne.insertAdjacentHTML("afterend", ``);
-
 
 //navbar
 const navbar = document.querySelector(".nav-fixed");
-const hamburgerIcon = document.querySelector("#hamburger");
+
 window.onscroll = () => {
-  if (window.scrollY > 150) {
-    navbar.classList.add("nav-scrolled");
-    hamburgerIcon.classList.add("filter");
-  } else {
-    navbar.classList.remove("nav-scrolled");
-    hamburgerIcon.classList.remove("filter");
-  }
+    if (window.scrollY > 150) {
+        navbar.classList.add("nav-scrolled");
+        hamburgerIcon.classList.add("filter");
+    } else {
+        navbar.classList.remove("nav-scrolled");
+        hamburgerIcon.classList.remove("filter");
+    }
 };
+pageOne.onscroll = () => { 
+    if(pageOne.scrollY > 100) {
+        pageOne.classList.add("fade-in");
+    }
+
+}
+
+//hamburger menu
+// const hamburgerIcon = document.querySelector("#hamburger");
+const hiddenMenu = document.querySelector(".hiddenMenu");
+const bodyElement = document.querySelector("body");
+
+function openNav() {
+    hiddenMenu.style.display = "block";
+    bodyElement.style.overflowY = "hidden";
+}
+function closeNav() {
+    hiddenMenu.style.display = "none";
+    bodyElement.style.overflowY = "scroll";
+}

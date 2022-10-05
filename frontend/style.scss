@@ -30,7 +30,9 @@
         transform: translateY(0%);
     }
 }
-
+.visible {
+    display: block;
+}
 .splashScreen {
     position: fixed;
     // z-index: 1;
@@ -93,22 +95,23 @@
         }
     }
 }
-.nav-fixed { 
+.nav-fixed {
     position: fixed;
-    transition: .4s;
+    transition: 0.4s;
 }
 .nav-scrolled {
     background-color: #fff;
-    height: 4.5vw!important;
+    height: 4.5vw !important;
     z-index: 99;
-    .navLeft a, .navRight a {
-        color: #292929!important;
+    .navLeft a,
+    .navRight a {
+        color: #292929 !important;
     }
-
 }
 .filter {
-    filter: none!important;
+    filter: none !important;
 }
+
 .navContainer {
     padding: 0 1em 0 0.5em;
     display: flex;
@@ -124,17 +127,23 @@
         max-height: 1.6vw;
         max-width: 2vw;
         font-weight: 100;
-        filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
+        filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg)
+            brightness(119%) contrast(115%);
     }
     #hamburger {
-        height: 1.6vw;
-        width: 2vw;
+        z-index: 99;
+        cursor: pointer;
+        img {
+            height: 1.6vw;
+            width: 2vw;
+        }
     }
 
-    .navLeft,  .navRight {
+    .navLeft,
+    .navRight {
         display: flex;
         align-items: center;
-        transition: .4s;
+        transition: 0.4s;
         a {
             font-size: 0.5vw;
             color: #fff;
@@ -148,13 +157,12 @@
             font-family: termina, sans-serif;
         }
     }
-    .navLeft:hover{
+    .navLeft:hover {
         background-color: white;
     }
     .navLeft:hover > a {
-        color: pink!important;
+        color: pink !important;
     }
-
     .hidden {
         display: none;
         position: absolute;
@@ -163,20 +171,33 @@
         left: 0;
         height: 20vw;
         width: 100%;
-    } 
+    }
     .hide:hover .hidden {
-        transition: .7s;
+        transition: 0.7s;
         display: block;
     }
-    .navRight{ 
+    .navRight {
         margin-right: 5vw;
-        display: inline;
-        position: relative;
 
         a {
             position: absolute;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
+
+            p{
+                display: inline;
+            }
+
+            img {
+                display: inline;
+                height: 28px;
+                width: 28px;
+                color: white;
+            }
+
         }
     }
     .navCenter {
@@ -194,7 +215,53 @@
         }
     }
 }
-
+.hiddenMenu {
+    transition: .4s;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #4b4f54;
+    height: 100vh;
+    width: 40%;
+    z-index: 99;
+    .hiddenContainer {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 8vw;
+        color: white;
+        span {
+            display: flex;
+            flex-direction: row;
+            color: #9f9f9f;
+            p {
+                margin-top: 0.5vw; 
+                font-size: 1.25rem;
+            }
+        }
+        h1 {
+            font-size: 3.25rem;
+            padding-top: 1vw;
+        }
+        h4 {
+            font-size: 1.125rem;
+            text-transform: uppercase;
+            margin-top: 0.5vw;
+        }
+    }
+    .closebtn {
+        position: absolute;
+        top: 2vw;
+        right: 2vw;
+        text-decoration: none;
+        color: white;
+        font-size: 1vw;
+        font-family: Domaine;
+    }
+}
 
 // ------------------NIKI--------------------
 .page1 {
@@ -282,148 +349,91 @@
     display: flex;
     justify-content: center;
 
-.containerSecondLeft {
-    width: 50%;
-    height: 80vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    box-shadow: -20px 20px #e29a95;
-}
-.containerSecondRight {
-
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-}
-    // position: relative;
-
-    // .imageSecond {
-    //     height: 80vh;
-    //     display: flex;
-    //     justify-content: flex-start;
-    //     align-items: center;
-    //     position: absolute;
-    //     top: 2rem;
-    //     bottom: 7rem;
-    //     left: 10rem;
-    //     box-shadow: -20px 20px #e29a95;
-    // }
-
-    // .containerSecondRight {
-
-    //     width: 50%;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     position: relative;
-    //     right: 0;
-
+    .containerSecondLeft {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 10vw;
+        img {
+            box-shadow: -20px 20px #e29a95;
+            height: 80vh;
+        }
+    }
+    .containerSecondRight {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .paragraphSecond p {
+            font-size: 1rem;
+            font-weight: 300;
+            font-family: Domaine;
+            line-height: 1.9375rem;
+            color: #53575c;
+            letter-spacing: -0.00625rem;
+            width: 40%;
+            margin: 1.5vh 0 1.5vh 0;
+        }
+        .headerSecond {
+            width: 80%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            h2 {
+                font-size: 3.25rem;
+                font-weight: 400;
+                font-family: Domaine;
+                line-height: 1.2;
+                color: #53575c;
+                letter-spacing: 0;
+            }
+        }
         
-    //     .headerSecond {
-    //         width: 80%;
-    //         display: flex;
-    //         justify-content: flex-end;
-    //         align-items: center;
-    //         position: absolute;
-    //         right: 10%;
-    //         top: 3rem;
-    //         font-size: 3vw;
-    //         font-weight: 100;
-    //         line-height: 1.2;
-    //         font-family: Domaine;
-    //         color: #53575c;
-    //         letter-spacing: 0;
-            
-    //     }
-    
-    //     .paragraphSecond {
-    //         width: 80%;
-    //         display: flex;
-    //         justify-content: flex-end;
-    //         align-items: center;
-    //         position: absolute;
-    //         bottom: 5rem;
-    //         left: 50%;
-    //         font-size: 1.56vw;
-    //         font-family: Domaine;
-    //         color: #53575c;
-            
-    //     }
-    
-    //     .details {
-    //         display: flex;
-    //         width: 80%;
-    //         height: 20vh;
-    //         position: absolute;
-    //         bottom: 2rem;
-    //         left: 50%;
-    //         font-size: 1.56vw;
-    //         font-family: Domaine;
-    //         color: #53575c;
-    //         justify-content: flex-end;
-    //         flex-flow: column;
-    //         text-align: center;
-    
-    //         .discription {
-    //             display: flex;
-    //             justify-content: space-between;
-    //             flex-flow: column;
-    //             align-items: center;
-    //             font-family: Domaine;
-    //             font-size: 20px;
-    //             color: #53575c;
-    //             width: 100%;
-    //             height: 8vh;
-    //             border-top: #53575c solid 1px;
-    //             padding-top: 10px;
-    //             padding-bottom: 20px;
-    
-    
-    
-    //             .paragraphThird {
-    //                 display: flex;
-    //                 justify-content: flex-start;
-    //                 position: absolute;
-    //                 flex-flow: column;
-    //                 text-align: center;
-    //                 left: 0vw;
-    //             }
-    
-    //             .paragraphFourth {
-    //                 display: flex;
-    //                 justify-content: flex-end;
-    //                 position: absolute;
-    //                 flex-flow: column;
-    //                 text-align: center;
-    //                 right: 2vw;
-    //             }
-    //         }
-    //     }
-    
-    //     .btn1 {
-    //         padding: 10px 50px;
-    //         border: solid 1px #e29a95;
-    //         width: 250px;
-    //         height: 50px;
-    //         display: flex;
-    //         justify-content: center;
-    //         align-items: center;
-    //         position: absolute;
-    //         bottom: 1rem;
-    //         left: 50%;
-    //         background-color: white;
-    //     }
-    
-    //     .btn1:hover {
-    //         background-color: #e29b95;
-    //         color: #ffffff;
-    //         transition-duration: 500ms;
-    //     }
-    // }
+        .details {
+            width: 66%;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            flex-flow: column;
 
-    // }
-    
+            .discription a {
+                width: 60%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                text-decoration: none;
+                font-family: termina, sans-serif;
+                color: #53575c;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                padding: 10px 0 20px;
+                border-top: 1px solid #c1c2c4;
+            }
+        }
 
-// ------------------NIKI--------------------
+        .apartmentsButton a {
+            text-decoration: none;
+            .btn1 {
+             padding: 10px 50px;
+             border: solid 1px #e29a95;
+             width: 250px;
+             height: 50px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             background-color: white;
+             
+            }
+        }
+
+         .btn1:hover {
+             background-color: #e29b95;
+             color: #ffffff;
+             transition-duration: 500ms;
+         }
+    }
+}
+
