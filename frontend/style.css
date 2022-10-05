@@ -316,7 +316,7 @@
   justify-content: flex-end;
   align-items: center;
   position: absolute;
-  bottom: 18rem;
+  bottom: 30rem;
   left: 50%;
   font-size: 1.56vw;
   font-family: Domaine;
@@ -327,7 +327,7 @@
   width: 40%;
   height: 20vh;
   position: absolute;
-  bottom: 7rem;
+  bottom: 13rem;
   left: 50%;
   font-size: 1.56vw;
   font-family: Domaine;
@@ -375,7 +375,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 2rem;
+  bottom: 8rem;
   left: 50%;
   background-color: white;
 }
