@@ -1,4 +1,5 @@
 const rootElement = document.querySelector("#root");
+
 rootElement.insertAdjacentHTML(
     "afterend",
     `<div class="container">
@@ -85,6 +86,7 @@ rootElement.insertAdjacentHTML(
 </div>
 <div class="floatingIcon"><img src="img/security.png"</div>`
 );
+
 const containerElement = document.querySelector(".container");
 
 containerElement.insertAdjacentHTML(
@@ -94,6 +96,7 @@ containerElement.insertAdjacentHTML(
 const floatingIcon = document.querySelector(".floatingIcon") 
 const splashScreen = document.querySelector(".splashScreen");
 const titleText = document.querySelectorAll(".titleText h1, .titleText p");
+
 window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         splashScreen.style.top = "-100vh";
@@ -120,14 +123,14 @@ containerElement.insertAdjacentHTML(
         </div>
         <div class="images">
             <div class="left">
-                <img src="/img/page1_left.jpg" class="pageOneFade"></img>
+                <img src="img/page1_left.jpg" class="pageOneFade"></img>
             </div>
             <div class="right">
                 <div class="righttop">
-                    <img src="/img/page1_righttop.jpg" class="pageOneFade"></img>
+                    <img src="img/page1_righttop.jpg" class="pageOneFade"></img>
                 </div>
                 <div class="rightbottom">
-                    <img src="/img/page1_rightbottom.jpg" class="pageOneFade"></img>
+                    <img src="img/page1_rightbottom.jpg" class="pageOneFade"></img>
                 </div>
             </div>
         </div>
