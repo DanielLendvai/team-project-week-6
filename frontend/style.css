@@ -125,7 +125,7 @@ html {
 }
 .nav-scrolled .navRight .enquire {
   background-color: #e29a95;
-  color: white;
+  color: white !important;
 }
 .nav-scrolled .navCenter a {
   font-size: 1.2vw !important;
