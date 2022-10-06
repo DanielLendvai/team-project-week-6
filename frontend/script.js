@@ -14,7 +14,7 @@ rootElement.insertAdjacentHTML(
             <div class="hiddenSectionContainer">
                 <div class="wrapper">
                     <div class="rooms">
-                        <img src="img/room1.jpg">
+                    <img src="img/room1.jpg">
                         <h2>One Bed</h2>
                         <p>from €2,140 p/m</p>
                         <button>View Details</button>
