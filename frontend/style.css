@@ -198,20 +198,27 @@ html {
 .navContainer .navRight {
   margin-right: 5vw;
 }
-.navContainer .navRight a {
+.navContainer .navRight .find-us {
   position: absolute;
   color: white;
   justify-content: center;
   align-items: center;
 }
-.navContainer .navRight a p {
+.navContainer .navRight .find-us p {
   display: inline;
 }
-.navContainer .navRight a img {
+.navContainer .navRight .find-us img {
   display: inline;
-  height: 28px;
-  width: 28px;
+  height: 32px;
+  width: 32px;
+  filter: drop-shadow(0px 0px 0px #e29a95) opacity(1) saturate(200%);
+}
+.navContainer .navRight .enquire {
+  position: absolute;
   color: white;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e29a95;
 }
 .navContainer .navCenter {
   display: flex;

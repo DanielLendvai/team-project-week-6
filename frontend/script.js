@@ -31,13 +31,13 @@ rootElement.insertAdjacentHTML(
             </a>
         </div>
         <div class="navRight">
-            <a href="">
+            <a class="find-us" href="">
                 <img src="img/map-icon.png" alt="">
                 <p>find us</p>
             </a>
         </div>
         <div class="navRight">
-            <a href="">
+            <a class="enquire" href="">
                 enquire now
             </a>
         </div>
