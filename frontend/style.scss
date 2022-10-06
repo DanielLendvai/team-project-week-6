@@ -76,6 +76,7 @@ html {
     img {
         max-width: 80%;
         max-height: 80%;
+        filter: invert(100%);
     }
 }
 .floatIn {
@@ -312,11 +313,12 @@ html {
         align-items: center;
         justify-content: center;
         flex: 1;
-        line-height: 2vw;
+        line-height: 1.7vw;
+        padding-right: 5vw;
         a {
             color: #e29a95;
             text-decoration: none;
-            font-size: 2.5vw;
+            font-size: 1.9vw;
             font-family: Domaine-bold;
         }
     }
