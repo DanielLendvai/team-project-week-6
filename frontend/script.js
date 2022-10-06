@@ -33,7 +33,7 @@ rootElement.insertAdjacentHTML(
         <div class="navRight">
             <a href="">
                 <img src="img/map-icon.png" alt="">
-                <p>find us</p>
+                find us
             </a>
         </div>
         <div class="navRight">
@@ -154,14 +154,16 @@ pageOne.insertAdjacentHTML(
 //navbar
 const navbar = document.querySelector(".nav-fixed");
 const hamburgerIcon = document.querySelector("#hamburger");
-
+const mapIcon = document.querySelector(".navRight img");
 window.onscroll = () => {
     if (window.scrollY > 100) {
         navbar.classList.add("nav-scrolled");
         hamburgerIcon.classList.add("filter");
+        mapIcon.classList.add("filter2");
     } else {
         navbar.classList.remove("nav-scrolled");
         hamburgerIcon.classList.remove("filter");
+        mapIcon.classList.remove("filter2");
     }
 };
 

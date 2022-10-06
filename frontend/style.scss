@@ -109,9 +109,16 @@ html {
     .navRight a {
         color: #292929 !important;
     }
+    .navCenter a {
+        font-size: 1.2vw!important;
+        line-height: 1.2vw!important;
+    }
 }
 .filter {
     filter: none !important;
+}
+.filter2 {
+    filter: invert(60%) sepia(10%) saturate(6013%) hue-rotate(310deg) brightness(200%) contrast(115%) !important;
 }
 
 .navContainer {
@@ -126,8 +133,8 @@ html {
         margin: 1vw 2vw 0 2vw;
     }
     img {
-        max-height: 1.6vw;
-        max-width: 2vw;
+        max-height: 1.2vw;
+        max-width: 1.6vw;
         font-weight: 100;
         
     }
@@ -136,10 +143,7 @@ html {
         cursor: pointer;
         filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg)
             brightness(119%) contrast(115%);
-        img {
-            height: 1.6vw;
-            width: 2vw;
-        }
+
     }
     .navLeft,
     .navRight {
@@ -180,25 +184,23 @@ html {
     }
     .navRight {
         margin-right: 5vw;
+        width: 5vw;
         a {
+            display: flex;
             position: absolute;
             color: white;
 
             justify-content: center;
             align-items: center;
-            
-
             p{
                 display: inline;
             }
-
             img {
                 display: inline;
                 height: 28px;
                 width: 28px;
                 color: white;
             }
-
         }
     }
     .navCenter {
@@ -206,12 +208,11 @@ html {
         align-items: center;
         justify-content: center;
         flex: 1;
-        padding-right: 5vw;
-        line-height: 1.7vw;
+        line-height: 2vw;
         a {
             color: #e29a95;
             text-decoration: none;
-            font-size: 1.1vw;
+            font-size: 2.5vw;
             font-family: Domaine-bold;
         }
     }
@@ -440,6 +441,7 @@ html {
             align-items: center;
             background-color: white;
             margin-top: 20px;
+            cursor: pointer;
         }
    
         .btn1:hover {
