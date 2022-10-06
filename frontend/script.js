@@ -82,7 +82,8 @@ rootElement.insertAdjacentHTML(
         <h1>A new way of city living</h1>
         <p>A different avenue of renting</p>
     </div>
-</div>`
+</div>
+<div class="floatingIcon"><img src="img/security.png"</div>`
 );
 const containerElement = document.querySelector(".container");
 
@@ -90,7 +91,7 @@ containerElement.insertAdjacentHTML(
     "afterend",
     `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`
 );
-
+const floatingIcon = document.querySelector(".floatingIcon") 
 const splashScreen = document.querySelector(".splashScreen");
 const titleText = document.querySelectorAll(".titleText h1, .titleText p");
 window.addEventListener("DOMContentLoaded", () => {
@@ -101,6 +102,9 @@ window.addEventListener("DOMContentLoaded", () => {
             titleText[i].classList.add("fade-in");
         }
     }, 1600);
+    setTimeout(() => {
+        floatingIcon.classList.add("floatIn")
+    }, 1000);
 });
 
 containerElement.insertAdjacentHTML(
