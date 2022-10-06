@@ -115,6 +115,9 @@ html {
         font-size: 1.2vw!important;
         line-height: 1.2vw!important;
     }
+    .hiddenSection {
+        top: 3.7vw!important;
+    }
 }
 .filter {
     filter: none !important;
@@ -327,15 +330,15 @@ html {
             color: #9f9f9f;
             p {
                 margin-top: 0.5vw; 
-                font-size: 1.25rem;
+                font-size: 1.25vw;
             }
         }
         h1 {
-            font-size: 3.25rem;
+            font-size: 3vw;
             padding-top: 1vw;
         }
         h4 {
-            font-size: 1.125rem;
+            font-size: 1.2vw;
             text-transform: uppercase;
             margin-top: 0.5vw;
         }
@@ -363,6 +366,8 @@ html {
         display: flex;
         flex-direction: column;
         row-gap: 20px;
+        opacity: 0;
+        transition: 1.5s;
 
         h1 {
             font-size: 16px;
@@ -406,6 +411,10 @@ html {
     .images {
         display: flex;
         column-gap: 50px;
+        img {
+            opacity: 0;
+            transition: 1.5s;
+        }
         .left {
             display: flex;
             justify-content: center;
@@ -427,6 +436,11 @@ html {
         }
     }
 }
+.pageOneFadeIn {
+    opacity: 1!important;
+    transform: translateY(-3vh);
+}
+
 
 .containerSecond {
     height: 100vh;
@@ -443,6 +457,8 @@ html {
         justify-content: flex-end;
         align-items: center;
         margin-right: 10vw;
+        opacity: 0;
+        transition: 1.5s;
         img {
             box-shadow: -20px 20px #e29a95;
             height: 80vh;
@@ -454,6 +470,8 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        opacity: 0;
+        transition: 1.5s;
         .paragraphSecond p {
             font-size: 1rem;
             font-weight: 300;
@@ -529,4 +547,16 @@ html {
          
     }
 }
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .navContainer .navLeft a, .navContainer .navRight a  {
+        font-size: 0.7vw;
+  }}
 
+@media (min-width: 600px) and (max-width: 1000px) {
+    .navContainer .navLeft a, .navContainer .navRight a  {
+        font-size: 0.8vw;
+  }}
+@media (min-width: 1300px) and (max-width: 1600px) {
+    .navContainer .navLeft a, .navContainer .navRight a  {
+        font-size: 0.6vw;
+  }}

@@ -1,5 +1,4 @@
 const rootElement = document.querySelector("#root");
-
 rootElement.insertAdjacentHTML(
     "afterend",
     `<div class="container">
@@ -85,8 +84,8 @@ rootElement.insertAdjacentHTML(
     </div>
 </div>`
 );
-
 const containerElement = document.querySelector(".container");
+
 containerElement.insertAdjacentHTML(
     "afterend",
     `<div class="splashScreen"><p>Griffith<br>Wood</p></div>`
@@ -94,7 +93,6 @@ containerElement.insertAdjacentHTML(
 
 const splashScreen = document.querySelector(".splashScreen");
 const titleText = document.querySelectorAll(".titleText h1, .titleText p");
-
 window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         splashScreen.style.top = "-100vh";
@@ -107,41 +105,41 @@ window.addEventListener("DOMContentLoaded", () => {
 
 containerElement.insertAdjacentHTML(
     "afterend",
-    `<div class="page1">
-  <div class="textwrap">
-      <h1>WELCOME</h1>
-      <div class="text">
-          Where city life meets suburban tranquillity, that’s Griffith Wood in Dublin. The finest urban facilities in a leafy setting.
-      </div>
-      <a href="#">
-          <span>WHY GRIFFITH WOOD</span>
-      </a>
-  </div>
-  <div class="images">
-      <div class="left">
-          <img src="/img/page1_left.jpg"></img>
-      </div>
-      <div class="right">
-          <div class="righttop">
-              <img src="/img/page1_righttop.jpg"></img>
-          </div>
-          <div class="rightbottom">
-              <img src="/img/page1_rightbottom.jpg"></img>
-          </div>
-      </div>
-  </div>
-</div>`
+    `
+    <div class="page1">
+        <div class="textwrap pageOneFade">
+            <h1>WELCOME</h1>
+            <div class="text">
+                Where city life meets suburban tranquillity, that’s Griffith Wood in Dublin. The finest urban facilities in a leafy setting.
+            </div>
+            <a href="#"><span>WHY GRIFFITH WOOD</span></a>
+        </div>
+        <div class="images">
+            <div class="left">
+                <img src="/img/page1_left.jpg" class="pageOneFade"></img>
+            </div>
+            <div class="right">
+                <div class="righttop">
+                    <img src="/img/page1_righttop.jpg" class="pageOneFade"></img>
+                </div>
+                <div class="rightbottom">
+                    <img src="/img/page1_rightbottom.jpg" class="pageOneFade"></img>
+                </div>
+            </div>
+        </div>
+    </div>
+    `
 );
 
 const pageOne = document.querySelector(".page1");
 pageOne.insertAdjacentHTML(
     "afterend",
     `<div class="containerSecond">
-<div class="containerSecondLeft">
+<div class="containerSecondLeft pageOneFade">
 <img class="imageSecond" src="https://www.griffith-wood.com/wp-content/uploads/2021/09/20210825_GREYSTAR_GRIFFITHWOOD_0122_GRD_WEB-560x728.jpg" alt="">
 </div>
 
-<div class="containerSecondRight">
+<div class="containerSecondRight pageOneFade">
 <div class="headerSecond"><h2>The avenue to <br>better living</h2></div>
 <div class="paragraphSecond"><p>One, two and three-bedroom apartments to rent, within a parkland setting on Dublin’s prestigious Griffith Avenue. Each designed to the highest specification and furnished to suit your needs, with access to a dedicated concierge service, bespoke gym, residents’ lounge and co-working space. And the best places to play, work and learn close to home.</p></div>
 <div class="details">
@@ -174,18 +172,25 @@ pageOne.insertAdjacentHTML(
 </div>`
 );
 
-// window.onscroll = () => {
-    //     if(window.scrollY > 200) {
-        //         pageOneImages.classList.add("fade-in");
-        //     }
-        // }
-        //navbar
-        const navbar = document.querySelector(".nav-fixed");
-        const hamburgerIcon = document.querySelector("#hamburger");
-        const mapIcon = document.querySelector(".navRight img");
-        const pageOneImagesLeft = document.querySelector(".page1 .left");
-        const pageOneImagesRight = document.querySelector(".page1 .images .right img");
-        
+let elementsArray = document.querySelectorAll(".pageOneFade");
+console.log(elementsArray);
+window.addEventListener('scroll', fadeIn ); 
+function fadeIn() {
+    for (let i = 0; i < elementsArray.length; i++) {
+        let elem = elementsArray[i]
+        let distInView = elem.getBoundingClientRect().top - window.innerHeight + 150;
+        if (distInView < 0) {
+            elem.classList.add("pageOneFadeIn");
+        } else {
+            elem.classList.remove("pageOneFadeIn");
+        }
+    }
+}
+fadeIn();
+
+const navbar = document.querySelector(".nav-fixed");
+const hamburgerIcon = document.querySelector("#hamburger");
+const mapIcon = document.querySelector(".navRight img");
 
 window.onscroll = () => {
     if (window.scrollY > 100) {
@@ -198,8 +203,6 @@ window.onscroll = () => {
         mapIcon.classList.remove("filter2");
     }
 };
-
-
 
 //hamburger menu
 // const bodyElement = document.querySelector("body");

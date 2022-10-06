@@ -131,6 +131,9 @@ html {
   font-size: 1.2vw !important;
   line-height: 1.2vw !important;
 }
+.nav-scrolled .hiddenSection {
+  top: 3.7vw !important;
+}
 
 .filter {
   filter: none !important;
@@ -344,14 +347,14 @@ html {
 }
 .hiddenMenu .hiddenContainer span p {
   margin-top: 0.5vw;
-  font-size: 1.25rem;
+  font-size: 1.25vw;
 }
 .hiddenMenu .hiddenContainer h1 {
-  font-size: 3.25rem;
+  font-size: 3vw;
   padding-top: 1vw;
 }
 .hiddenMenu .hiddenContainer h4 {
-  font-size: 1.125rem;
+  font-size: 1.2vw;
   text-transform: uppercase;
   margin-top: 0.5vw;
 }
@@ -377,6 +380,8 @@ html {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  opacity: 0;
+  transition: 1.5s;
 }
 .page1 .textwrap h1 {
   font-size: 16px;
@@ -416,6 +421,10 @@ html {
   -moz-column-gap: 50px;
        column-gap: 50px;
 }
+.page1 .images img {
+  opacity: 0;
+  transition: 1.5s;
+}
 .page1 .images .left {
   display: flex;
   justify-content: center;
@@ -433,6 +442,11 @@ html {
   display: flex;
 }
 
+.pageOneFadeIn {
+  opacity: 1 !important;
+  transform: translateY(-3vh);
+}
+
 .containerSecond {
   height: 100vh;
   width: 100%;
@@ -448,6 +462,8 @@ html {
   justify-content: flex-end;
   align-items: center;
   margin-right: 10vw;
+  opacity: 0;
+  transition: 1.5s;
 }
 .containerSecond .containerSecondLeft img {
   box-shadow: -20px 20px #e29a95;
@@ -459,6 +475,8 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
+  transition: 1.5s;
 }
 .containerSecond .containerSecondRight .paragraphSecond p {
   font-size: 1rem;
@@ -523,4 +541,20 @@ html {
   background-color: #e29b95;
   color: #ffffff;
   transition-duration: 500ms;
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+  .navContainer .navLeft a, .navContainer .navRight a {
+    font-size: 0.7vw;
+  }
+}
+@media (min-width: 600px) and (max-width: 1000px) {
+  .navContainer .navLeft a, .navContainer .navRight a {
+    font-size: 0.8vw;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1600px) {
+  .navContainer .navLeft a, .navContainer .navRight a {
+    font-size: 0.6vw;
+  }
 }/*# sourceMappingURL=style.css.map */
