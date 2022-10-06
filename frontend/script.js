@@ -10,7 +10,30 @@ rootElement.insertAdjacentHTML(
         </a>
         </div>
         <div class="navLeft hide">
-        <div class="hiddenSection"></div>
+        <div class="hiddenSection">
+            <div class="hiddenSectionContainer">
+                <div class="wrapper">
+                    <div class="rooms">
+                        <img src="img/room1.jpg">
+                        <h2>One Bed</h2>
+                        <p>from €2,140 p/m</p>
+                        <button>View Details</button>
+                    </div>
+                    <div class="rooms">
+                        <img src="img/room2.jpg" alt="">
+                        <h2>Two Bed</h2>
+                        <p>from €2,445 p/m</p>
+                        <button>View Details</button>
+                    </div>
+                    <div class="rooms">
+                        <img src="img/room3.jpg" alt="">
+                        <h2>Three Bed</h2>
+                        <p>from €3,600 p/m</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <a href="">
                 APARTMENTS
             </a>
@@ -37,7 +60,7 @@ rootElement.insertAdjacentHTML(
             </a>
         </div>
         <div class="navRight">
-            <a href="">
+            <a class="enquire" href="">
                 enquire now
             </a>
         </div>
@@ -151,10 +174,19 @@ pageOne.insertAdjacentHTML(
 </div>`
 );
 
-//navbar
-const navbar = document.querySelector(".nav-fixed");
-const hamburgerIcon = document.querySelector("#hamburger");
-const mapIcon = document.querySelector(".navRight img");
+// window.onscroll = () => {
+    //     if(window.scrollY > 200) {
+        //         pageOneImages.classList.add("fade-in");
+        //     }
+        // }
+        //navbar
+        const navbar = document.querySelector(".nav-fixed");
+        const hamburgerIcon = document.querySelector("#hamburger");
+        const mapIcon = document.querySelector(".navRight img");
+        const pageOneImagesLeft = document.querySelector(".page1 .left");
+        const pageOneImagesRight = document.querySelector(".page1 .images .right img");
+        
+
 window.onscroll = () => {
     if (window.scrollY > 100) {
         navbar.classList.add("nav-scrolled");
@@ -167,8 +199,10 @@ window.onscroll = () => {
     }
 };
 
+
+
 //hamburger menu
-const bodyElement = document.querySelector("body");
+// const bodyElement = document.querySelector("body");
 const hiddenMenu = document.querySelector(".hiddenMenu");
 
 function openNav() {
